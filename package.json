@@ -1,0 +1,31 @@
+{
+  "name": "monorepo-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "packageManager": "pnpm@8.15.1",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:docs": "turbo build --filter docs",
+    "build:web": "turbo build --filter web",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "dev": "turbo dev",
+    "rmdist": "turbo rmdist",
+    "rct": "rm -rf ./node_modules/.cache/turbo"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.6.2",
+    "vite": "^5.4.1",
+    "vue": "^3.5.3"
+  },
+  "dependencies": {
+    "@pkg/components": "workspace:^",
+    "@pkg/style": "workspace:^",
+    "@pkg/utils": "workspace:^"
+  }
+}
